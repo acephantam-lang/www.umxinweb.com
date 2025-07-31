@@ -1,0 +1,430 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Umxin Music Distribution - Your Music, Your Way</title>
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Inter Font from Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            /* Animated background gradient */
+            background: linear-gradient(-45deg, #1f2937, #111827, #0f172a, #1e293b);
+            background-size: 400% 400%;
+            animation: gradient-shift 15s ease infinite;
+            color: white;
+        }
+
+        @keyframes gradient-shift {
+            0% {
+                background-position: 0% 50%;
+            }
+            50% {
+                background-position: 100% 50%;
+            }
+            100% {
+                background-position: 0% 50%;
+            }
+        }
+        /* Custom styles for a subtle glow effect on text */
+        .glow-text {
+            text-shadow: 0 0 8px rgba(129, 140, 248, 0.5); /* indigo-300 with transparency */
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Header & Navigation -->
+    <header class="bg-gray-900 border-b border-gray-800 sticky top-0 z-50">
+        <nav class="container mx-auto px-4 sm:px-6 lg:px-8 py-4 flex justify-between items-center">
+            <!-- Logo -->
+            <a href="#" class="flex items-center space-x-2">
+                <svg class="w-8 h-8 text-indigo-400" fill="currentColor" viewBox="0 0 24 24">
+                    <path d="M12 2A10 10 0 0 0 2 12a10 10 0 0 0 10 10 10 10 0 0 0 10-10A10 10 0 0 0 12 2zm-1 15.5V11h-2v6.5h2zm4-6.5h-2v6.5h2V11zM11 9H9V7h2v2zM15 9h-2V7h2v2zM12 4a8 8 0 0 1 8 8 8 8 0 0 1-8 8 8 8 0 0 1-8-8 8 8 0 0 1 8-8z"/>
+                    <circle cx="9" cy="7" r="1.5" />
+                    <circle cx="15" cy="7" r="1.5" />
+                    <rect x="9" y="11" width="2" height="6.5" />
+                    <rect x="13" y="11" width="2" height="6.5" />
+                </svg>
+                <span class="text-xl font-bold text-gray-100"> Umxin Music  Distribution</span>
+            </a>
+
+            <!-- Mobile Menu Button -->
+            <button id="mobile-menu-button" class="md:hidden p-2 rounded-lg text-gray-400 hover:text-white focus:outline-none focus:ring-2 focus:ring-indigo-500 transition-colors">
+                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path>
+                </svg>
+            </button>
+
+            <!-- Desktop Navigation -->
+            <div class="hidden md:flex items-center space-x-8">
+                <a href="#features" class="text-gray-300 hover:text-indigo-400 transition-colors duration-200">Features</a>
+                <a href="#pricing" class="text-gray-300 hover:text-indigo-400 transition-colors duration-200">Pricing</a>
+                <a href="#toolkit" class="text-gray-300 hover:text-indigo-400 transition-colors duration-200">Toolkit</a>
+                <a href="#testimonials" class="text-gray-300 hover:text-indigo-400 transition-colors duration-200">Testimonials</a>
+                <a href="#" class="text-gray-300 hover:text-indigo-400 transition-colors duration-200">Contact</a>
+                <a href="#" class="bg-indigo-600 hover:bg-indigo-500 text-white font-semibold py-2 px-6 rounded-full shadow-lg transition-all duration-300 transform hover:-translate-y-1">Get Started</a>
+            </div>
+        </nav>
+
+        <!-- Mobile Menu (Hidden by default) -->
+        <div id="mobile-menu" class="hidden md:hidden bg-gray-900 border-t border-gray-800 py-4 px-4">
+            <div class="flex flex-col space-y-4 text-center">
+                <a href="#features" class="text-gray-300 hover:text-indigo-400 transition-colors duration-200">Features</a>
+                <a href="#pricing" class="text-gray-300 hover:text-indigo-400 transition-colors duration-200">Pricing</a>
+                <a href="#toolkit" class="text-gray-300 hover:text-indigo-400 transition-colors duration-200">Toolkit</a>
+                <a href="#testimonials" class="text-gray-300 hover:text-indigo-400 transition-colors duration-200">Testimonials</a>
+                <a href="#" class="bg-indigo-600 hover:bg-indigo-500 text-white font-semibold py-2 px-6 rounded-full shadow-lg transition-all duration-300">Get Started</a>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <!-- Hero Section -->
+        <section class="py-20 sm:py-32 text-center relative overflow-hidden">
+            <div class="container mx-auto px-4">
+                <h1 class="text-4xl sm:text-5xl lg:text-7xl font-extrabold leading-tight tracking-tighter text-transparent bg-clip-text bg-gradient-to-r from-indigo-400 to-indigo-600 animate-pulse">
+                    Distribute Your Music, <br class="hidden sm:inline"> Keep 100% of Your Royalties.
+                </h1>
+                <p class="mt-6 text-lg sm:text-xl text-gray-400 max-w-3xl mx-auto">
+                    Umxin Music Distribution is the easiest way to get your music on Spotify, Apple Music, and over 150+ digital stores worldwide.
+                </p>
+                <div class="mt-10 flex flex-col sm:flex-row justify-center space-y-4 sm:space-y-0 sm:space-x-4">
+                    <a href="#" class="bg-indigo-600 hover:bg-indigo-500 text-white font-bold py-3 px-8 rounded-full shadow-lg transition-all duration-300 transform hover:scale-105">
+                        Start Now
+                    </a>
+                    <a href="#pricing" class="bg-gray-800 hover:bg-gray-700 text-gray-300 font-bold py-3 px-8 rounded-full shadow-lg transition-all duration-300 transform hover:scale-105">
+                        View Pricing
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <!-- Artist Toolkit Section (New) -->
+        <section id="toolkit" class="py-20 bg-gray-900 border-t border-gray-800">
+            <div class="container mx-auto px-4">
+                <h2 class="text-3xl sm:text-4xl font-bold text-center text-gray-100">✨ Artist Marketing Toolkit</h2>
+                <p class="mt-4 text-center text-gray-400 text-lg max-w-2xl mx-auto">
+                    Use our AI-powered tools to generate compelling slogans and bios for your music. Simply describe your music below and select a tool.
+                </p>
+
+                <div class="mt-12 max-w-3xl mx-auto bg-gray-950 p-8 rounded-xl shadow-lg border border-gray-800">
+                    <label for="music-description" class="block text-gray-400 font-semibold mb-2">
+                        Describe your music:
+                    </label>
+                    <textarea id="music-description" rows="4" class="w-full bg-gray-800 text-gray-200 rounded-lg p-4 focus:ring-2 focus:ring-indigo-500 focus:outline-none transition-colors" placeholder="e.g., 'A high-energy electronic track with a driving synth bass and ethereal female vocals. It's great for dance clubs and intense workouts.'"></textarea>
+
+                    <div class="mt-6 flex flex-col sm:flex-row justify-center space-y-4 sm:space-y-0 sm:space-x-4">
+                        <button id="generate-slogan-btn" class="bg-indigo-600 hover:bg-indigo-500 text-white font-bold py-3 px-8 rounded-full shadow-lg transition-all duration-300 transform hover:scale-105">
+                            ✨ Generate Marketing Slogans
+                        </button>
+                        <button id="generate-bio-btn" class="bg-gray-800 hover:bg-gray-700 text-gray-300 font-bold py-3 px-8 rounded-full shadow-lg transition-all duration-300 transform hover:scale-105">
+                            ✨ Generate Artist Bio
+                        </button>
+                    </div>
+                </div>
+
+                <div id="output-area" class="mt-8 max-w-3xl mx-auto">
+                    <!-- The generated content will be displayed here -->
+                    <div id="loading-indicator" class="hidden text-center text-indigo-400 font-semibold">
+                        <p>Generating content...</p>
+                    </div>
+                    <div id="result-box" class="hidden bg-gray-950 p-8 rounded-xl shadow-lg border border-gray-800">
+                        <h3 id="result-title" class="text-2xl font-bold text-gray-100 mb-4"></h3>
+                        <div id="result-content" class="text-gray-300 space-y-4"></div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Features Section -->
+        <section id="features" class="py-20 bg-gray-900 border-t border-gray-800">
+            <div class="container mx-auto px-4">
+                <h2 class="text-3xl sm:text-4xl font-bold text-center text-gray-100">Why Artists Choose Us</h2>
+                <p class="mt-4 text-center text-gray-400 text-lg">We provide the tools you need to succeed in the music industry.</p>
+
+                <div class="mt-12 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                    <!-- Feature Card 1 -->
+                    <div class="bg-gray-950 p-8 rounded-xl shadow-lg border border-gray-800 transition-all duration-300 hover:scale-105 hover:border-indigo-600">
+                        <div class="w-16 h-16 bg-indigo-500 rounded-full flex items-center justify-center mx-auto mb-6">
+                            <svg class="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 10h18M3 14h18m-9-4v8m-7 0a2 2 0 01-2-2v-4a2 2 0 012-2h4a2 2 0 012 2v4a2 2 0 01-2 2H5zM15 10h4a2 2 0 012 2v4a2 2 0 01-2 2h-4a2 2 0 01-2-2v-4a2 2 0 012-2z"></path></svg>
+                        </div>
+                        <h3 class="text-xl font-semibold text-center text-gray-100">Global Distribution</h3>
+                        <p class="mt-4 text-gray-400 text-center">
+                            Reach all major streaming platforms and online stores with just one click.
+                        </p>
+                    </div>
+
+                    <!-- Feature Card 2 -->
+                    <div class="bg-gray-950 p-8 rounded-xl shadow-lg border border-gray-800 transition-all duration-300 hover:scale-105 hover:border-indigo-600">
+                        <div class="w-16 h-16 bg-indigo-500 rounded-full flex items-center justify-center mx-auto mb-6">
+                            <svg class="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8c1.657 0 3 1.343 3 3s-1.343 3-3 3-3-1.343-3-3 1.343-3 3-3z"></path><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8V4m0 8v4m-4-4H4m8 0h4m-4-8a4 4 0 100 8 4 4 0 000-8z"></path><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11h-3.5a.5.5 0 01-.5-.5V7.5a.5.5 0 01.5-.5h3.5a.5.5 0 01.5.5V11zM15 11h3.5a.5.5 0 01.5.5v3.5a.5.5 0 01-.5.5h-3.5a.5.5 0 01-.5-.5V11zM9 11h3.5a.5.5 0 01.5.5v3.5a.5.5 0 01-.5.5H9a.5.5 0 01-.5-.5V11z"></path></svg>
+                        </div>
+                        <h3 class="text-xl font-semibold text-center text-gray-100">Keep 100% Royalties</h3>
+                        <p class="mt-4 text-gray-400 text-center">
+                            We don't take a cut of your earnings. You get to keep every single penny.
+                        </p>
+                    </div>
+
+                    <!-- Feature Card 3 -->
+                    <div class="bg-gray-950 p-8 rounded-xl shadow-lg border border-gray-800 transition-all duration-300 hover:scale-105 hover:border-indigo-600">
+                        <div class="w-16 h-16 bg-indigo-500 rounded-full flex items-center justify-center mx-auto mb-6">
+                            <svg class="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M11 3.055A9.975 9.975 0 0112 22C6.477 22 2 17.523 2 12S6.477 2 12 2c.983 0 1.94.148 2.852.428"></path><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"></path><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 16h1m-1 4h1m-4-8h1m-1 4h1m-4-8h1m-1 4h1m-4-8h1"></path></svg>
+                        </div>
+                        <h3 class="text-xl font-semibold text-center text-gray-100">Detailed Analytics</h3>
+                        <p class="mt-4 text-gray-400 text-center">
+                            Track your music performance and understand your audience with in-depth reports.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Pricing Section -->
+        <section id="pricing" class="py-20 bg-gray-950 border-t border-gray-800">
+            <div class="container mx-auto px-4">
+                <h2 class="text-3xl sm:text-4xl font-bold text-center text-gray-100">Simple & Transparent Pricing</h2>
+                <p class="mt-4 text-center text-gray-400 text-lg">Choose the plan that's right for you. No hidden fees.</p>
+
+                <div class="mt-12 grid grid-cols-1 lg:grid-cols-2 gap-8 max-w-5xl mx-auto">
+                    <!-- Pricing Card 1 -->
+                    <div class="bg-gray-900 p-8 rounded-xl border border-gray-800 transition-all duration-300 hover:shadow-2xl hover:scale-105">
+                        <h3 class="text-2xl font-bold text-indigo-400">Free</h3>
+                        <p class="mt-4 text-gray-400">Perfect for new artists taking their first step.</p>
+                        <div class="mt-6">
+                            <span class="text-5xl font-extrabold text-white">$0</span>
+                            <span class="text-gray-400">/year</span>
+                        </div>
+                        <ul class="mt-8 space-y-4 text-gray-300">
+                            <li class="flex items-center space-x-3">
+                                <svg class="w-5 h-5 text-green-400" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path></svg>
+                                <span>Distribute unlimited releases</span>
+                            </li>
+                            <li class="flex items-center space-x-3">
+                                <svg class="w-5 h-5 text-green-400" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path></svg>
+                                <span>Keep 100% royalties</span>
+                            </li>
+                            <li class="flex items-center space-x-3">
+                                <svg class="w-5 h-5 text-red-400" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zM8.707 7.293a1 1 0 00-1.414 1.414L8.586 10l-1.293 1.293a1 1 0 101.414 1.414L10 11.414l1.293 1.293a1 1 0 001.414-1.414L11.414 10l1.293-1.293a1 1 0 00-1.414-1.414L10 8.586 8.707 7.293z" clip-rule="evenodd"></path></svg>
+                                <span>No detailed analytics</span>
+                            </li>
+                        </ul>
+                        <a href="#" class="mt-10 block w-full text-center bg-indigo-600 hover:bg-indigo-500 text-white font-bold py-3 rounded-full shadow-lg transition-colors duration-300">
+                            Start Free
+                        </a>
+                    </div>
+
+                    <!-- Pricing Card 2 -->
+                    <div class="bg-indigo-900 p-8 rounded-xl border-2 border-indigo-600 shadow-2xl transition-all duration-300 transform scale-105 relative">
+                        <div class="absolute top-0 right-0 -mt-3 -mr-3 px-4 py-1 text-sm font-semibold bg-indigo-600 text-white rounded-full">Most Popular</div>
+                        <h3 class="text-2xl font-bold text-indigo-200">Pro</h3>
+                        <p class="mt-4 text-indigo-200">For serious artists ready to take control of their career.</p>
+                        <div class="mt-6">
+                            <span class="text-5xl font-extrabold text-white">$19</span>
+                            <span class="text-indigo-200">/year</span>
+                        </div>
+                        <ul class="mt-8 space-y-4 text-indigo-100">
+                            <li class="flex items-center space-x-3">
+                                <svg class="w-5 h-5 text-green-400" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path></svg>
+                                <span>All features of Free plan</span>
+                            </li>
+                            <li class="flex items-center space-x-3">
+                                <svg class="w-5 h-5 text-green-400" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path></svg>
+                                <span>Detailed streaming analytics</span>
+                            </li>
+                            <li class="flex items-center space-x-3">
+                                <svg class="w-5 h-5 text-green-400" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path></svg>
+                                <span>Pre-save links for new releases</span>
+                            </li>
+                            <li class="flex items-center space-x-3">
+                                <svg class="w-5 h-5 text-green-400" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path></svg>
+                                <span>Priority support</span>
+                            </li>
+                        </ul>
+                        <a href="#" class="mt-10 block w-full text-center bg-white hover:bg-gray-200 text-indigo-900 font-bold py-3 rounded-full shadow-lg transition-colors duration-300">
+                            Go Pro
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Testimonials Section -->
+        <section id="testimonials" class="py-20 bg-gray-900 border-t border-gray-800">
+            <div class="container mx-auto px-4">
+                <h2 class="text-3xl sm:text-4xl font-bold text-center text-gray-100">What Our Artists Say</h2>
+                <p class="mt-4 text-center text-gray-400 text-lg">Hear from the creators who trust us with their music.</p>
+                <div class="mt-12 grid grid-cols-1 md:grid-cols-2 gap-8">
+                    <!-- Testimonial 1 -->
+                    <div class="bg-gray-950 p-8 rounded-xl border border-gray-800 transition-all duration-300 hover:border-indigo-600">
+                        <p class="text-gray-300 italic text-lg leading-relaxed">
+                            "Umxin Music  Distribution has completely changed my career. The platform is so easy to use, and I love that I keep all of my money. The analytics dashboard is a game-changer!"
+                        </p>
+                        <div class="mt-6 flex items-center">
+                            <img class="w-12 h-12 rounded-full border-2 border-indigo-600" src="https://placehold.co/128x128/1F2937/D1D5DB?text=JM" alt="Jane Miller">
+                            <div class="ml-4">
+                                <p class="text-lg font-semibold text-gray-100">Jane Miller</p>
+                                <p class="text-gray-400">Indie Artist</p>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Testimonial 2 -->
+                    <div class="bg-gray-950 p-8 rounded-xl border border-gray-800 transition-all duration-300 hover:border-indigo-600">
+                        <p class="text-gray-300 italic text-lg leading-relaxed">
+                            "I've used other distributors before, but none compare to Symphony. The support team is incredible, and the speed of release is unmatched. Highly recommend!"
+                        </p>
+                        <div class="mt-6 flex items-center">
+                            <img class="w-12 h-12 rounded-full border-2 border-indigo-600" src="https://placehold.co/128x128/1F2937/D1D5DB?text=AM" alt="Alex Rodriguez">
+                            <div class="ml-4">
+                                <p class="text-lg font-semibold text-gray-100">Alex Rodriguez</p>
+                                <p class="text-gray-400">Electronic Producer</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-gray-900 border-t border-gray-800 py-8">
+        <div class="container mx-auto px-4 text-center text-gray-400">
+            <div class="flex justify-center space-x-6">
+                <!-- Social Media Icons (SVGs are a great option here) -->
+                <a href="#" class="text-gray-400 hover:text-indigo-400 transition-colors">
+                    <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10c5.52 0 10-4.48 10-10S17.52 2 12 2zm-2 16.5v-7h-2V16H6v-6c0-1.1.9-2 2-2h4c1.1 0 2 .9 2 2v6.5h-2v-4.5H10v4.5zM18 10h-2v8h2v-8z"/></svg>
+                </a>
+                <a href="#" class="text-gray-400 hover:text-indigo-400 transition-colors">
+                    <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24"><path d="M22.46 6c-.77.35-1.6.58-2.46.69.88-.53 1.56-1.37 1.88-2.38-.83.5-1.75.85-2.74 1.04-.78-.83-1.89-1.34-3.13-1.34-2.37 0-4.3 1.93-4.3 4.3 0 .34.04.67.11.99-3.58-.18-6.75-1.89-8.88-4.48-.38.65-.59 1.4-.59 2.21 0 1.49.76 2.81 1.92 3.59-.7-.02-1.35-.22-1.92-.53v.05c0 2.09 1.49 3.83 3.47 4.22-.36.1-.73.15-1.12.15-.27 0-.53-.03-.79-.08.55 1.72 2.15 2.97 4.05 3.01-1.48 1.16-3.34 1.85-5.38 1.85-.35 0-.7-.02-1.04-.06 1.91 1.22 4.17 1.93 6.6 1.93 7.92 0 12.26-6.55 12.26-12.26 0-.19-.01-.38-.01-.56.84-.6 1.56-1.35 2.14-2.22z"/></svg>
+                </a>
+                <a href="#" class="text-gray-400 hover:text-indigo-400 transition-colors">
+                    <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2.163c3.204 0 3.584.013 4.851.071 1.171.055 1.84.249 2.373.468.618.257 1.092.597 1.637 1.142.545.545.885 1.019 1.142 1.637.219.533.413 1.202.468 2.373.058 1.267.07 1.647.07 4.851s-.013 3.584-.071 4.851c-.055 1.171-.249 1.84-.468 2.373-.257.618-.597 1.092-1.142 1.637-.545.545-1.019.885-1.637 1.142-.533.219-1.202.413-2.373.468-1.267.058-1.647.07-4.851.07s-3.584-.013-4.851-.071c-1.171-.055-1.84-.249-2.373-.468-.618-.257-1.092-.597-1.637-1.142-.545-.545-.885-1.019-1.142-1.637-.219-.533-.413-1.202-.468-2.373-.058-1.267-.07-1.647-.07-4.851s.013-3.584.071-4.851c.055-1.171.249-1.84.468-2.373.257-.618.597-1.092 1.142-1.637.545-.545 1.019-.885 1.637-1.142.533-.219 1.202-.413 2.373-.468 1.267-.058 1.647-.07 4.851-.07zm0-2.163c-3.265 0-3.673.014-4.94.072-1.304.062-2.09.281-2.82.571-.784.309-1.424.743-2.064 1.383-.64.64-1.074 1.28-1.383 2.064-.29.73-.509 1.516-.571 2.82-.058 1.267-.072 1.675-.072 4.94s.014 3.673.072 4.94c.062 1.304.281 2.09.571 2.82.309.784.743 1.424 1.383 2.064.64.64 1.28 1.074 2.064 1.383.73.29 1.516.509 2.82.571 1.267.058 1.675.072 4.94.072s3.673-.014 4.94-.072c1.304-.062 2.09-.281 2.82-.571.784-.309 1.424-.743 2.064-1.383.64-.64 1.074-1.28 1.383-2.064.29-.73.509-1.516.571-2.82.058-1.267.072-1.675.072-4.94s-.014-3.673-.072-4.94c-.062-1.304-.281-2.09-.571-2.82-.309-.784-.743-1.424-1.383-2.064-.64-.64-1.28-1.074-2.064-1.383-.73-.29-1.516-.509-2.82-.571-1.267-.058-1.675-.072-4.94-.072zm0 10.163c-2.072 0-3.765-1.693-3.765-3.765s1.693-3.765 3.765-3.765 3.765 1.693 3.765 3.765-1.693 3.765-3.765 3.765zm0-2.163c.969 0 1.765-.796 1.765-1.765s-.796-1.765-1.765-1.765-1.765.796-1.765 1.765.796 1.765 1.765 1.765zm6.84-5.328a.925.925 0 00-.925.925.925.925 0 00.925.925.925.925 0 00.925-.925.925.925 0 00-.925-.925z"/></svg>
+                </a>
+            </div>
+            <p class="mt-6">&copy; 2024 Umxin Music Distribution. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <!-- JavaScript for Mobile Navigation Toggle and AI Toolkit -->
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            // Mobile navigation toggle
+            const mobileMenuButton = document.getElementById('mobile-menu-button');
+            const mobileMenu = document.getElementById('mobile-menu');
+            mobileMenuButton.addEventListener('click', function() {
+                mobileMenu.classList.toggle('hidden');
+            });
+
+            // AI Toolkit functionality
+            const musicDescriptionInput = document.getElementById('music-description');
+            const generateSloganBtn = document.getElementById('generate-slogan-btn');
+            const generateBioBtn = document.getElementById('generate-bio-btn');
+            const loadingIndicator = document.getElementById('loading-indicator');
+            const resultBox = document.getElementById('result-box');
+            const resultTitle = document.getElementById('result-title');
+            const resultContent = document.getElementById('result-content');
+
+            // API configuration
+            const apiKey = "";
+            const apiUrl = `https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash-preview-05-20:generateContent?key=${apiKey}`;
+
+            // Handle API calls with exponential backoff
+            async function callGeminiApi(prompt, maxRetries = 5) {
+                let delay = 1000; // 1 second initial delay
+                for (let i = 0; i < maxRetries; i++) {
+                    try {
+                        const chatHistory = [{ role: "user", parts: [{ text: prompt }] }];
+                        const payload = { contents: chatHistory };
+                        const response = await fetch(apiUrl, {
+                            method: 'POST',
+                            headers: { 'Content-Type': 'application/json' },
+                            body: JSON.stringify(payload)
+                        });
+
+                        if (!response.ok) {
+                            throw new Error(`API response was not OK: ${response.statusText}`);
+                        }
+
+                        const result = await response.json();
+                        if (result.candidates && result.candidates.length > 0 &&
+                            result.candidates[0].content && result.candidates[0].content.parts &&
+                            result.candidates[0].content.parts.length > 0) {
+                            return result.candidates[0].content.parts[0].text;
+                        } else {
+                            throw new Error('Unexpected API response structure or missing content.');
+                        }
+                    } catch (error) {
+                        if (i < maxRetries - 1) {
+                            console.error(`Attempt ${i + 1} failed. Retrying in ${delay}ms...`, error);
+                            await new Promise(resolve => setTimeout(resolve, delay));
+                            delay *= 2; // Exponential backoff
+                        } else {
+                            console.error('All retries failed.', error);
+                            throw error; // Re-throw the error after all retries
+                        }
+                    }
+                }
+            }
+            
+            // Generate Marketing Slogans
+            generateSloganBtn.addEventListener('click', async function() {
+                const description = musicDescriptionInput.value.trim();
+                if (!description) {
+                    resultBox.classList.add('hidden');
+                    return;
+                }
+                loadingIndicator.classList.remove('hidden');
+                resultBox.classList.add('hidden');
+
+                const prompt = `Based on the following music description, generate a list of 5-7 catchy marketing slogans. The slogans should be short, impactful, and ready to use for an artist's social media or promotional materials.
+Music description: "${description}"`;
+
+                try {
+                    const responseText = await callGeminiApi(prompt);
+                    resultTitle.textContent = 'Generated Marketing Slogans';
+                    resultContent.innerHTML = responseText.split('\n').map(item => `<p>${item}</p>`).join('');
+                    resultBox.classList.remove('hidden');
+                } catch (error) {
+                    resultTitle.textContent = 'Error';
+                    resultContent.innerHTML = `<p class="text-red-400">Failed to generate slogans. Please try again later.</p>`;
+                    resultBox.classList.remove('hidden');
+                } finally {
+                    loadingIndicator.classList.add('hidden');
+                }
+            });
+
+            // Generate Artist Bio
+            generateBioBtn.addEventListener('click', async function() {
+                const description = musicDescriptionInput.value.trim();
+                if (!description) {
+                    resultBox.classList.add('hidden');
+                    return;
+                }
+                loadingIndicator.classList.remove('hidden');
+                resultBox.classList.add('hidden');
+
+                const prompt = `Based on the following music description, write a professional artist bio of about 150-200 words. The bio should capture the artist's unique sound, influences, and target audience, suitable for a press kit or website.
+Music description: "${description}"`;
+
+                try {
+                    const responseText = await callGeminiApi(prompt);
+                    resultTitle.textContent = 'Generated Artist Bio';
+                    resultContent.innerHTML = `<p>${responseText}</p>`;
+                    resultBox.classList.remove('hidden');
+                } catch (error) {
+                    resultTitle.textContent = 'Error';
+                    resultContent.innerHTML = `<p class="text-red-400">Failed to generate bio. Please try again later.</p>`;
+                    resultBox.classList.remove('hidden');
+                } finally {
+                    loadingIndicator.classList.add('hidden');
+                }
+            });
+        });
+    </script>
+</body>
+</html>
